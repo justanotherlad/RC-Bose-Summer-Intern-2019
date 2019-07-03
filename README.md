@@ -4,5 +4,5 @@ This repository contains the works done by me,Swastik Banerjee, and Suvraneel Ch
 ``
           <br/><br/>We tried on automizing the security check of a cipher against Linear and Differential Cryptanalysis.
 <br/>Aim:<br/>
-    Our main task was, given any cipher, we can check min. no of Active S-boxes for each round using GLPK solver and find out hence how many rounds are required minimum for it to be resistant to linear/differential cryptanalysis.
+    Our main task was, given any cipher, we can check min. no of Active S-boxes for each round using GLPK solver and find out hence how many minimum rounds are required for it to be resistant to linear/differential cryptanalysis.
 
