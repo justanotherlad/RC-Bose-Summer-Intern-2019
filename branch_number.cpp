@@ -57,8 +57,8 @@ int main() {
             y[j] = gal_mul(a[j][0], x0) ^ gal_mul(a[j][1], x1) ^
                    gal_mul(a[j][2], x2) ^ gal_mul(a[j][3], x3);
           }
-          cout << (int)y[0] << " " << (int)y[1] << " " << (int)y[2] << " "
-               << (int)y[3] << endl;
+          /*cout << (int)y[0] << " " << (int)y[1] << " " << (int)y[2] << " "
+               << (int)y[3] << endl;*/
           int p0 = 0;
 
           if (x0 > 0) p0 += 1;
