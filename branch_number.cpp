@@ -46,29 +46,26 @@ int main() {
   }
   byte x0, x1, x2, x3;
   byte y[4] = {0, 0, 0, 0};
-  int MAX = 256;
   int v = 8;
 
-  for (x0 = 0; x0 < 10; x0++) {
-    for (x1 = 0; x1 < 10; x1++) {
-      for (x2 = 0; x2 < 10; x2++) {
-        for (x3 = 0; x3 < 10; x3++) {
+  for (x0 = 1; x0 < 256; x0++) {
+    for (x1 = 1; x1 < 256; x1++) {
+      for (x2 = 1; x2 < 256; x2++) {
+        for (x3 = 1; x3 < 256; x3++) {
           for (int j = 0; j < 4; j++) {
             y[j] = gal_mul(a[j][0], x0) ^ gal_mul(a[j][1], x1) ^
                    gal_mul(a[j][2], x2) ^ gal_mul(a[j][3], x3);
           }
-          /*cout << (int)y[0] << " " << (int)y[1] << " " << (int)y[2] << " "
-               << (int)y[3] << endl;*/
           int p0 = 0;
 
-          if (x0 > 0) p0 += 1;
-          if (x1 > 0) p0 += 1;
-          if (x2 > 0) p0 += 1;
-          if (x3 > 0) p0 += 1;
-          if (y[0] > 0) p0 += 1;
-          if (y[1] > 0) p0 += 1;
-          if (y[2] > 0) p0 += 1;
-          if (y[3] > 0) p0 += 1;
+          if (x0 > 0) p0++;
+          if (x1 > 0) p0++;
+          if (x2 > 0) p0++;
+          if (x3 > 0) p0++;
+          if (y[0] > 0) p0++;
+          if (y[1] > 0) p0++;
+          if (y[2] > 0) p0++;
+          if (y[3] > 0) p0++;
           if (p0 < v) v = p0;
         }
       }
